@@ -1,0 +1,15 @@
+[project]
+name = "qubit-poisson"
+version = "2.0.0"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "transformers>=4.35", "datasets", "pyyaml", "numpy"]
+[project.optional-dependencies]
+test = ["pytest"]
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: full-spec tests"]
